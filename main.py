@@ -11,9 +11,9 @@ from keep_alive import keep_alive # Assume this is handled by your environment
 token = os.environ['TOKEN_BOT_DISCORD']
 
 # Rôles et salon du serveur
-ID_CROUPIER = 1406210029815861258
-ID_MEMBRE = 1406210131515019355
-ID_SALON_PUISSANCE_4 = 1404446607533146182 # Remplacer par l'ID du salon Puissance 4
+ID_CROUPIER = 1401471414262829066
+ID_MEMBRE = 1366378672281620495
+ID_SALON_PUISSANCE_4 = 1407650674384044033 # Remplacer par l'ID du salon Puissance 4
 
 # Dictionnaire pour stocker les duels en cours.
 duels = {}
