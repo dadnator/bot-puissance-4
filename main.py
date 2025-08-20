@@ -147,12 +147,18 @@ class ConnectFourView(discord.ui.View):
     def create_buttons(self):
         self.clear_items()
         for i in range(COLUMNS):
+            # Utilisez une condition pour répartir les boutons sur deux lignes
+            if i < 5:
+                row_number = 0
+            else:
+                row_number = 1
+                
             button = discord.ui.Button(
                 label=f"{i+1}",
                 style=discord.ButtonStyle.secondary,
                 custom_id=f"col_{i}",
                 disabled=False,
-                row=0
+                row=row_number
             )
             button.callback = self.on_button_click
             self.add_item(button)
