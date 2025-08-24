@@ -213,14 +213,18 @@ class ConnectFourView(discord.ui.View):
         else:
             montant = self.duel_data["montant"]
             gain_net = int(montant * 2 * (1 - COMMISSION))
+            # Déterminer le perdant
+            loser = self.joueur1 if winner.id != self.joueur1.id else self.joueur2
+
             title = f"🎉 Victoire de {winner.display_name} !"
             description = (
-                f"{winner.mention} a vaincu {loser.mention} !\n"
-                f"Il remporte **{gain_net:,}** kamas (après 5% de commission)."
+                f"**{winner.mention}** remporte le duel face à **{loser.mention}** et gagne :\n"
+                f"**{gain_net:,}** kamas (après 5% de commission).\n\n"
+                "Félicitations !"
             ).replace(",", " ")
-
             color = discord.Color.green()
             gagnant_id = winner.id
+
         
         embed = create_board_embed(self.board, title, description, color)
         # Désactive tous les boutons une fois la partie terminée
