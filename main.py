@@ -220,8 +220,8 @@ class ConnectFourView(discord.ui.View):
             description = (
                 f"**{winner.mention}** Abattu **{loser.mention}** \n"
                 f"--------------------\n"
-                f"**{winner.mention}**"
-                f"**Remporte** **{gain_net:,} ** kamas (après 5% de commission).\n\n"
+                f"**{winner.mention}** \n
+                **Remporte** **{gain_net:,}** kamas \n (après 5% de commission).\n\n"
                 "Félicitations !"
             ).replace(",", " ")
             color = discord.Color.green()
