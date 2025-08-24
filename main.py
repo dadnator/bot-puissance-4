@@ -215,9 +215,10 @@ class ConnectFourView(discord.ui.View):
             gain_net = int(montant * 2 * (1 - COMMISSION))
             title = f"🎉 Victoire de {winner.display_name} !"
             description = (
-                f"{winner.mention} remporte le duel et gagne :\n**{gain_net:,}** kamas\n(après 5% de commission).\n\n"
-                f"Félicitations !"
+                f"{winner.mention} a vaincu {loser.mention} !\n"
+                f"Il remporte **{gain_net:,}** kamas (après 5% de commission)."
             ).replace(",", " ")
+
             color = discord.Color.green()
             gagnant_id = winner.id
         
