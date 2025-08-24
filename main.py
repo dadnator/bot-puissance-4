@@ -218,8 +218,9 @@ class ConnectFourView(discord.ui.View):
 
             title = f"🎉 Victoire de {winner.display_name} !"
             description = (
-                f"**{winner.mention}** remporte le duel face à **{loser.mention}** et gagne :\n"
-                f"**{gain_net:,}** kamas (après 5% de commission).\n\n"
+                f"**{winner.mention}** l’emporte face à **{loser.mention}** \n"
+                f"**{winner.mention}**"
+                f"**Remporte {gain_net:,}** kamas (après 5% de commission).\n\n"
                 "Félicitations !"
             ).replace(",", " ")
             color = discord.Color.green()
