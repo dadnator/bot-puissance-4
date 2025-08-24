@@ -218,7 +218,7 @@ class ConnectFourView(discord.ui.View):
 
             title = f"🎉 Victoire de {winner.display_name} !"
             description = (
-                f"**{winner.mention}** Abattu **{loser.mention}** \n"
+                f"**{winner.mention}** À battu **{loser.mention}** \n"
                 f"--------------------\n"
                 f"**{winner.mention}** \n"
                 f"**Remporte** **{gain_net:,}** kamas \n (après 5% de commission).\n\n"
