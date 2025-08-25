@@ -451,7 +451,7 @@ class StatsView(discord.ui.View):
 @app_commands.describe(montant="Montant misé en kamas")
 async def duel(interaction: discord.Interaction, montant: int):
     if interaction.channel.id != ID_SALON_PUISSANCE_4:
-        await interaction.response.send_message("❌ Cette commande ne peut être utilisée que dans le salon de Puissance 4.", ephemeral=True)
+        await interaction.response.send_message("❌ Cette commande ne peut être utilisée que dans le salon de 『🟡•🔴』puissance•4.", ephemeral=True)
         return
     
     if montant <= 0:
@@ -557,7 +557,7 @@ async def quit_duel(interaction: discord.Interaction):
 @bot.tree.command(name="statsall", description="Affiche les stats de Puissance 4 à vie.")
 async def statsall(interaction: discord.Interaction):
     if interaction.channel.id != ID_SALON_PUISSANCE_4:
-        await interaction.response.send_message("❌ Cette commande ne peut être utilisée que dans le salon de Puissance 4.", ephemeral=True)
+        await interaction.response.send_message("❌ Cette commande ne peut être utilisée que dans le salon de 『🟡•🔴』puissance•4.", ephemeral=True)
         return
 
     c.execute("""
